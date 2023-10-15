@@ -1,0 +1,69 @@
+--- 
+import Footer from '../components/Footer.astro';
+import logo from "../img/logorfswhite.png";
+import arrow from "../img/backward.svg";
+
+interface Props {
+	title: string;
+	description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description">
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<meta name="description" content={description}>
+	</head>
+	<body>
+    <!-- <img class="toggleIcon" src={arrow} alt="flechas" />    
+    <a class="logo" href="#">      
+      <img src={logo} alt="logotipo" />
+    </a> -->    
+		<slot />
+    <Footer />          
+	</body>
+</html>
+<style is:global>
+	@import url('https://necolas.github.io/normalize.css/8.0.1/normalize.css');
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap');
+
+:root {
+  --primary: #8c73a7;
+  --secondary: #272727;
+  --accent: #a0f347;
+  --black: #000000;
+  --white: #ffecec;  
+  --main-font: 'Outfit', sans-serif;
+  --alt-font: 'Outfit', sans-serif;
+}
+
+html {  
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 2rem;
+  font-family: var(--main-font);  
+  background-color: var(--black);  
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wrapper {
+  width: 80%;
+  height: 100%;
+  margin: auto;
+}
+
+</style>

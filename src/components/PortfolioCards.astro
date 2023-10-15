@@ -1,0 +1,48 @@
+---
+import gifBookworm from "../img/bookwormGif.gif";
+---
+
+<div class="card">
+    <img src={gifBookworm} alt="Web Screenshot">
+    <h3>Bookworms</h3>
+    <p>E-commerce de libros, con carrito y validación.</p>
+</div>
+
+<style>
+    .card {
+        width: 450px;        
+        border: 1px solid var(--accent);
+        padding: 5px;        
+        border-radius: 5%;
+    }
+
+    .card img {
+        filter: grayscale();
+        border-radius: 5% 5% 0% 0%;
+    }
+
+    .card h3{
+        color: var(--white);
+        font-size: 1rem;        
+        text-align: center;
+    }
+
+    .card p {
+        color: var(--white);
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    .card:hover {        
+        scale: 120%;
+        transition: 1s;
+    }
+
+    
+    .card:hover img {        
+        filter: none;
+    }
+
+    
+        
+</style>

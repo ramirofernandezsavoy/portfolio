@@ -1,0 +1,65 @@
+---
+
+import Contact from "./Contact.astro";
+---
+
+<header class="header">
+  <div class="wrapper">
+  <div class="hero">
+    <div class="headerTitle">       
+      <h3>Front End Developer</h3>  
+      <h1>Ramiro Fernández Savoy</h1>        
+      <p>¡Hola! Soy Ramiro, un desarrollador web creativo y apasionado. Motivado por el desarrollo contante de las ideas.</p>
+      <p>Esto va más allá de la tecnología; se trata de entender tus necesidades y convertirlas en una experiencia excepcional.</p>
+      <p>¿Listo para dar vida a tu visión? Estoy para ayudarte.</p>
+    </div>     
+</div>  
+
+</header>
+
+<style>
+  .header {
+    height: 100svh;   
+    background-image: url('../img/ramiro-blanco-negro.jpg');
+    background-position: right;
+    background-size: cover;    
+  }   
+
+  .hero {    
+    height: 100%;
+    display: flex;    
+    align-items: center;
+  }  
+
+  .headerTitle {        
+    max-width: 950px;
+    width: 100%;
+    display: flex;    
+    flex-direction: column;
+  }
+  
+  .headerTitle h3 {
+    font-size: 1.4rem;    
+    color: var(--accent);
+    margin: 0;
+    margin-left: 6px;    
+    
+}
+
+  .headerTitle h1 {
+    color: var(--white);
+    font-size: 8rem;
+    font-weight: lighter;
+    line-height: 7.5rem;    
+    margin: 0;
+    margin-bottom: 40px;
+    margin-top: 10px;
+  }
+
+.headerTitle p {  
+    font-size: 1.1rem;    
+    margin: 0;
+    line-height: 1.5rem;       
+    color: white
+    }
+</style>
