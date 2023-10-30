@@ -1,24 +1,119 @@
 ---
-
+import ramaPic from '../img/bwsnapshot.jpg'
 ---
 
-<footer class="footer">           
-        <p class="copyright">Ramiro Savoy © Todos los derechos reservados { new Date().getFullYear() }</p>    
+<footer class="footer">
+  <div class="white-box"></div>
+  <div class="black-box">
+    <div class="wrap">        
+        <a class="contact" href="/">hello@ramirosavoy.com.ar</a>
+      <svg
+        width=""
+        height="48"
+        viewBox="0 0 1976 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1975.06 13.0607C1975.65 12.4749 1975.65 11.5251 1975.06 10.9393L1965.51 1.3934C1964.93 0.807611 1963.98 0.807611 1963.39 1.3934C1962.81 1.97919 1962.81 2.92893 1963.39 3.51472L1971.88 12L1963.39 20.4853C1962.81 21.0711 1962.81 22.0208 1963.39 22.6066C1963.98 23.1924 1964.93 23.1924 1965.51 22.6066L1975.06 13.0607ZM0 13.5H1974V10.5H0V13.5Z"
+          fill="#fff"></path>
+      </svg>
+      <div class="footer-text">
+        <div class="socials">
+          <a href="/">Instagram</a>
+          <a href="/">Twitter</a>
+          <a href="/">LinkedIn</a>
+          <a href="/">Resume</a>
+        </div>
+        <p>Ramiro Savoy © {new Date().getFullYear()}</p>
+      </div>
+    </div>
+  </div>
+  <div class="card-face">
+    <div>Do you have an <span>idea</span>?</div>
+    <div>Let's chat</div>    
+            <img src={ramaPic} alt="Rama Snapshot">
+      
+  </div>
+  
 </footer>
 
-<style>
-    .footer {
-    background-color: var(--black);
-    height: 30px;
-    padding: 10px 0 10px 0;
-}
+<style>  
+    .wrap {
+        width: 100%;
+        max-width: 1750px;
+        margin: 0 auto;
+    }
+    .card-face img{
+        border-radius: 100%;
+        height: 120px;
+        position: absolute;
+        top: -40px;
+        left: -50px;
+        border: solid 10px;
+        border-color: var(--white);
+    }    
 
-.copyright {
-    color: var(--white);
-    font-size: 0.8rem;
+    .card-face {
+        position: absolute;        
+        background-color: var(--white);
+        right: 50%;
+        bottom: 30%;
+        transform: translateX(50%);
+        height: 250px;
+        width: 500px;
+        z-index: 10;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;   
+        font-family: var(--serif-font);     
+    }
+
+    .card-face span {
+        font-weight: bold;
+    }
+
+    .contact {
+        font-size: 2rem;
+    }
+
+  .white-box {
+    height: 60%;
+    background-color: var(--white);
+    background-image: url(../img/RamaBG.jpg);
+    background-position: 50% 30%;
+    background-size: cover;        
+  }
+
+  .black-box {
+    height: 40%;
+    background-color: black;
+    display: flex;
+    align-items: end;        
+  }
+  
+  .footer {
+    height: 100svh;
+    position: relative;
+  }
+
+  .socials {
+    width: 40%;
+    display: flex;
+    gap: 4rem;
+  }
+
+  .footer-text {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-text p,
+  a {
+    color: white;
     text-decoration: none;
-    font-weight: 500;        
-    text-align: end;    
-}
-
+    font-size: 1rem;
+  }
 </style>

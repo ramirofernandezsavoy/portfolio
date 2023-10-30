@@ -1,20 +1,114 @@
 ---
-import logo from "../img/rfslogoborder.png";
+
 ---
 
 <section class="about">
-  <p>Mi nombre es Ramiro, soy un desarrollador enfocado principalmente en front end, aunque incorporando conceptos de back end en mi camino a ser full stack.</p>
-  <p>Vivo en Buenos Aires, Arg. Practico y disfruto del arte y los deportes, especialmente fútbol</p>
-  <p>Estoy en busca de proyectos apasionantes en los cuales aportar mi visión al mismo tiempo que desarrollo mis conocimientos.</p>
+  <div class="wrapper">
+    <div class="info-box">
+      <h3>Info</h3>
+      <svg width="" height="4" viewBox="0 0 1976 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 2H1976" stroke="#A2A2A2" stroke-width="3"/>
+        </svg>        
+      <div class="box-area">
+        <div class="title">
+          <h5> ➡ Overview</h5>
+        </div>
+        <div class="info">
+          <p>Hello, I'm Ramiro, a passionate and aspiring front-end developer embarking on a journey to create captivating and immersive digital interactive experiences. I'm genuinely excited about the world of web development and the endless possibilities it offers. My primary goal is to turn creative and inspiring ideas into tangible, user-friendly interfaces that leave a lasting impact on users.</p>
+          <a href="/"><span>Read more...</span></a>
+        </div>
+      </div>
+      <svg width="" height="4" viewBox="0 0 1976 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 2H1976" stroke="#A2A2A2" stroke-width="3"/>
+        </svg>      
+      <div class="box-area">
+        <div class="title">
+          <h5> ➡ Work enviroment</h5>
+        </div>
+        <div class="info columns">
+          <div>
+          <p>UX / UI Design</p>
+          <p>HTML / CSS</p>
+          <p>Javascript</p>
+          <p>React</p>
+          <p>Node.Js</p>
+        </div>
+        <div>
+          <p>MERN Stack</p>
+          <p>Sass</p>
+          <p>Redux</p>
+          <p>Astro</p>
+          <p>NextJs</p>
+        </div>          
+        </div>
+      </div>
+    </div>
+  </div>  
 </section>
 
 <style>
+
+  .info span {
+    font-weight: 500;
+  }
+
+  h3 {
+    font-size: 4rem;
+    margin: 0;
+    font-family: var(--serif-font);
+  }
+
+  h5 {
+    font-size: 1.3rem;
+    margin: 0;
+    font-weight: 100;
+  }
+
+  p, a {
+    font-size: 1.1rem;
+    margin: 0;
+    line-height: 1.7rem;  
+    text-decoration: none;  
+    font-weight: 100;
+  }
+
+  a {
+    color: var(--secondary);
+  }
+
+  a:hover {
+    color: var(--accent);
+  }
+
+  .columns {
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    gap: 10rem;
+  }
+
+  .title {
+    max-width: 30%;
+  }
+
+  .info {
+    max-width: 40%;
+  }
+
+  .box-area {
+    display: flex;
+    justify-content: space-between;
+    height: 30%;
+  }
   .about {
-    color: var(--white);
-    background: rgb(256, 256, 256, 10%);    
-    width: 90%;
-    height: 100vh;
-    margin: auto;
-    text-align: center;        
+    background-color: var(--white);
+  }
+
+  .info-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100svh;
+    gap: 1rem;
   }
 </style>

@@ -1,65 +1,147 @@
 ---
-
-import Contact from "./Contact.astro";
+import "animate.css";
 ---
 
-<header class="header">
+<header>
   <div class="wrapper">
-  <div class="hero">
-    <div class="headerTitle">       
-      <h3>Front End Developer</h3>  
-      <h1>Ramiro Fernández Savoy</h1>        
-      <p>¡Hola! Soy Ramiro, un desarrollador web creativo y apasionado. Motivado por el desarrollo contante de las ideas.</p>
-      <p>Esto va más allá de la tecnología; se trata de entender tus necesidades y convertirlas en una experiencia excepcional.</p>
-      <p>¿Listo para dar vida a tu visión? Estoy para ayudarte.</p>
-    </div>     
-</div>  
-
+    <nav>
+      <div class="nav-div-1">
+        <h1>Ramiro Savoy</h1><h3>Developer</h3>
+      </div>
+      <ul class="nav-div-2">
+        <li>Work</li>
+        <li>Info</li>
+        <li class="button">Let's Chat</li>
+      </ul>
+    </nav>
+    <section class="description">
+      <p>
+        Developer crafting engaging, customer focused digital experiences.<br> Do
+        you have a vision?<br><span>I'm here for you.</span>
+      </p>
+    </section>
+    <section class="info">
+      <svg
+        width=""
+        height="24"
+        viewBox="0 0 1976 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1975.06 13.0607C1975.65 12.4749 1975.65 11.5251 1975.06 10.9393L1965.51 1.3934C1964.93 0.807611 1963.98 0.807611 1963.39 1.3934C1962.81 1.97919 1962.81 2.92893 1963.39 3.51472L1971.88 12L1963.39 20.4853C1962.81 21.0711 1962.81 22.0208 1963.39 22.6066C1963.98 23.1924 1964.93 23.1924 1965.51 22.6066L1975.06 13.0607ZM0 13.5H1974V10.5H0V13.5Z"
+          fill="#A2A2A2"></path>
+      </svg>
+      <div class="info-box">
+        <div class="info-cards card1">
+          <p class="gray">freelance</p>
+          <p>Front-end Developer</p>
+        </div>
+        <div class="info-cards">
+          <p class="gray">based</p>
+          <p>Buenos Aires, Arg.</p>
+        </div>
+        <div class="info-cards">
+          <p class="gray">get in touch</p>
+          <p>hello@ramirosavoy.com.ar</p>
+        </div>
+      </div>
+    </section>
+  </div>
 </header>
-
 <style>
-  .header {
-    height: 100svh;   
-    background-image: url('../img/ramiro-blanco-negro.jpg');
-    background-position: right;
-    background-size: cover;    
-  }   
+  .card1 {
+    max-width: 30%;
+   width: 100%;    
+  }
+  .info-box {
+    display: flex;
+    justify-content: space-between;    
+  }
 
-  .hero {    
-    height: 100%;
-    display: flex;    
-    align-items: center;
-  }  
+  .info-cards p {
+    line-height: 0.3rem;
+  }
 
-  .headerTitle {        
-    max-width: 950px;
+  .gray {
+    color: var(--secondary);
+  }
+
+  .description {
+    max-width: 600px;
     width: 100%;
-    display: flex;    
+    height: 50%;
+    display: flex;
     flex-direction: column;
-  }
-  
-  .headerTitle h3 {
-    font-size: 1.4rem;    
-    color: var(--accent);
-    margin: 0;
-    margin-left: 6px;    
-    
-}
-
-  .headerTitle h1 {
-    color: var(--white);
-    font-size: 8rem;
-    font-weight: lighter;
-    line-height: 7.5rem;    
-    margin: 0;
-    margin-bottom: 40px;
-    margin-top: 10px;
+    justify-content: end;    
   }
 
-.headerTitle p {  
-    font-size: 1.1rem;    
+  .description p {
+    font-size: 1.7rem;
+    line-height: 2.2rem;
+    font-family: var(--alt-font);
+  }
+
+  .description span {
+    font-weight: 700;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 95svh;    
+  }
+
+  header {
+    height: 100vh;    ;
+  }
+
+  ul > li {
+    padding: 7px;
+  }
+
+  .nav-div-1 {
+    display: flex;
+    justify-content: space-between;
+    max-width: 205px;
+    width: 100%;
+  }
+
+  .nav-div-2 {
+    display: flex;
+    gap: 20px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+  }
+
+  .button {
+    border-radius: 5px;
+    background-color: var(--accent);
+  }
+
+  h1,
+  p,
+  h3 {
     margin: 0;
-    line-height: 1.5rem;       
-    color: white
-    }
+  }
+
+  h1 {
+    font-size: 1.1rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    padding: 10px;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    color: var(--secondary);
+  }
 </style>
