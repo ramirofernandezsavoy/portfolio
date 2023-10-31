@@ -26,14 +26,14 @@
           <h5> ➡ Work enviroment</h5>
         </div>
         <div class="info columns">
-          <div>
+          <div class="col1">
           <p>UX / UI Design</p>
           <p>HTML / CSS</p>
           <p>Javascript</p>
           <p>React</p>
           <p>Node.Js</p>
         </div>
-        <div>
+        <div class="col2">
           <p>MERN Stack</p>
           <p>Sass</p>
           <p>Redux</p>
@@ -84,7 +84,7 @@
     display: flex;
     justify-content: start;
     width: 100%;
-    gap: 10rem;
+    gap: 10rem;    
   }
 
   .title {
@@ -98,7 +98,7 @@
   .box-area {
     display: flex;
     justify-content: space-between;
-    height: 30%;
+    height: 30%;    
   }
   .about {
     background-color: var(--white);
@@ -111,4 +111,47 @@
     height: 100svh;
     gap: 1rem;
   }
+/* Media Queries */
+
+@media screen and (max-width: 1199px) {
+  .info {
+  max-width: 60%;
+ }
+ }
+
+ @media screen and (max-width: 680px) {
+  .box-area {        
+    flex-direction: column;
+    justify-content: center;        
+    height: 40%;        
+    gap: 2rem;
+  }
+  .info {
+  max-width: 100%;  
+ }
+ .columns {        
+    justify-content: start;
+    width: 100%;
+    gap: 1rem;        
+  }
+  h3 {
+    font-size: 2rem;    
+  }
+  .col1{
+    text-align: start;
+  }
+  .col2{
+    text-align: start;
+  }
+  .title {
+    max-width: 100%;    
+    text-align: left;
+  }
+ }
+ @media screen and (max-width: 340px){
+    svg {
+      visibility: hidden;
+    }
+ }
+
 </style>

@@ -20,16 +20,27 @@
       </div>
     </div>
     </div>
-  </div>
+  </div>  
 </section>
 
 <style>
+  .boxxx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .imgbox {    
+    max-width: 400px;
+    width: 100%;
+  }
 
   .project-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100%;
+    height: 100%;    
   }
 
   .project-box h2 {
@@ -47,7 +58,8 @@
   }
  .card-box {
   display: flex;
-  justify-content: space-between;  
+  justify-content: space-between;
+  gap: 10px; 
  }
 
  .card {
@@ -55,8 +67,29 @@
   flex-direction: column;
  }
 
+ .card a {
+  padding: 10px 0 10px 0;
+ }
+
  .projects {
   background-color: black;
-  height: 100svh;  
+  min-height: 100svh;  
+ }
+
+ /* Media Queries */
+ 
+ @media screen and (max-width: 1199px) {
+  .card a {
+  font-size: 1rem;
+ }
+ }
+
+ @media screen and (max-width: 1199px) {
+  .card-box {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;      
+ } 
  }
 </style>

@@ -9,8 +9,8 @@ import "animate.css";
         <h1>Ramiro Savoy</h1><h3>Developer</h3>
       </div>
       <ul class="nav-div-2">
-        <li>Work</li>
-        <li>Info</li>
+        <li class="hide">Work</li>
+        <li class="hide">Info</li>
         <li class="button">Let's Chat</li>
       </ul>
     </nav>
@@ -56,6 +56,7 @@ import "animate.css";
   }
   .info-box {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;    
   }
 
@@ -144,4 +145,35 @@ import "animate.css";
     font-size: 1.1rem;
     color: var(--secondary);
   }
+  @media screen and (max-width: 640px) {
+    .card1 {
+   max-width: 100%;
+   width: 100%;   
+  }
+  .info-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;        
+  }
+
+  .info-cards p {
+    font-size: 1rem;
+  }
+
+  .description p {
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    font-family: var(--alt-font);
+  } 
+ }
+ @media screen and (max-width: 600px){
+  .nav-div-1 {
+    flex-direction: column;
+    width: auto;    
+  }
+
+  .hide {
+    display: none;
+  }
+ }
 </style>
