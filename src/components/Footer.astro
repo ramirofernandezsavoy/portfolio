@@ -2,11 +2,11 @@
 import ramaPic from "../img/bwsnapshot.jpg";
 ---
 
-<footer class="footer">
+<footer class="footer" id="footer">
   <div class="white-box"></div>
   <div class="black-box">
     <div class="wrap">
-      <a class="contact" href="/">hello@ramirosavoy.com.ar</a>
+      <a class="contact" target="_blank" href="https://mail.google.com/mail/?view=cm&source=mailto&to=rawii.k@gmail.com">hello@ramirosavoy.com.ar</a>
       <svg
         width=""
         height="48"
@@ -34,6 +34,14 @@ import ramaPic from "../img/bwsnapshot.jpg";
     <div>Let's chat</div>
     <img src={ramaPic} alt="Rama Snapshot" />
   </div>
+  <a href="#header" class="floater">
+  <svg width="" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <mask id="path-1-inside-1_137_4" fill="white">
+    <path d="M46 23C46 35.7025 35.7025 46 23 46C10.2975 46 0 35.7025 0 23C0 10.2975 10.2975 0 23 0C35.7025 0 46 10.2975 46 23Z"/>
+    </mask>
+    <path d="M23.7071 11.2929C23.3166 10.9024 22.6834 10.9024 22.2929 11.2929L15.9289 17.6569C15.5384 18.0474 15.5384 18.6805 15.9289 19.0711C16.3195 19.4616 16.9526 19.4616 17.3431 19.0711L23 13.4142L28.6569 19.0711C29.0474 19.4616 29.6805 19.4616 30.0711 19.0711C30.4616 18.6805 30.4616 18.0474 30.0711 17.6569L23.7071 11.2929ZM24 36L24 12L22 12L22 36L24 36ZM44 23C44 34.598 34.598 44 23 44V48C36.8071 48 48 36.8071 48 23H44ZM23 44C11.402 44 2 34.598 2 23H-2C-2 36.8071 9.19288 48 23 48V44ZM2 23C2 11.402 11.402 2 23 2V-2C9.19288 -2 -2 9.19288 -2 23H2ZM23 2C34.598 2 44 11.402 44 23H48C48 9.19288 36.8071 -2 23 -2V2Z" fill="#e7c5f7" mask="url(#path-1-inside-1_137_4)"/>
+  </svg>
+</a>    
 </footer>
 
 <style>
@@ -145,6 +153,20 @@ import ramaPic from "../img/bwsnapshot.jpg";
     font-size: 1.3rem;
   }
   }
+
+  .floater {
+    position: absolute;
+    right: 3%;
+    bottom: 12%;
+    z-index: 500;
+    color: var(--accent);
+  }
+
+  .floater:hover {
+    transform: scale(115%);
+    transition-duration: 1s;
+  }
+
   @media screen and (max-width: 528px){
     .white-box {            
     background-position: 70% 30%;    

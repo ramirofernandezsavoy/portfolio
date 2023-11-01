@@ -2,16 +2,16 @@
 import "animate.css";
 ---
 
-<header>
+<header id="header">
   <div class="wrapper">
     <nav>
       <div class="nav-div-1">
         <h1>Ramiro Savoy</h1><h3>Developer</h3>
       </div>
       <ul class="nav-div-2">
-        <li class="hide">Work</li>
-        <li class="hide">Info</li>
-        <li class="button">Let's Chat</li>
+        <li class="hide"><a href="#projects">Work</a></li>
+        <li class="hide"><a  href="#about">Info</a></li>
+        <li class="button"><a target="_blank" href="https://mail.google.com/mail/?view=cm&source=mailto&to=rawii.k@gmail.com">Let's chat</a></li>
       </ul>
     </nav>
     <section class="description">
@@ -43,13 +43,16 @@ import "animate.css";
         </div>
         <div class="info-cards">
           <p class="gray">get in touch</p>
-          <p>hello@ramirosavoy.com.ar</p>
+          <p><a target="_blank" href="https://mail.google.com/mail/?view=cm&source=mailto&to=rawii.k@gmail.com">hello@ramirosavoy.com.ar</a></p>
         </div>
       </div>
     </section>
   </div>
 </header>
 <style>
+  html {
+    scroll-behavior: smooth;
+}
   .card1 {
     max-width: 30%;
    width: 100%;    
@@ -112,6 +115,11 @@ import "animate.css";
   .nav-div-2 {
     display: flex;
     gap: 20px;
+  }
+
+  .nav-div-2 a, .info-cards a {
+    text-decoration: none;
+    color: black;    
   }
 
   nav {
